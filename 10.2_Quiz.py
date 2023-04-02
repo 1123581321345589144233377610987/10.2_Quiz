@@ -21,12 +21,6 @@ class Question:
         self.ianswer3 = ianswer3
     def set_canswer(self, canswer):
         self.canswer = canswer
-    def set_num1(self, num1):
-        self.num1 = num1
-    def set_num2(self, num2):
-        self.num2 = num2
-    def set_num3(self, num3):
-        self.num3 = num3
     def set_cnum(self, cnum):
         self.cnum = cnum
     def set_question(self, question):
@@ -39,12 +33,6 @@ class Question:
         return self.ianswer3
     def get_canswer(self):
         return self.canswer
-    def get_num1(self):
-        return self.num1
-    def get_num2(self):
-        return self.num2
-    def get_num3(self):
-        return self.num3
     def get_cnum(self):
         return self.cnum
 
@@ -55,13 +43,10 @@ class Question:
         while count < 5:
             if start == 1:
                 words = self.ianswer1
-                self.num1 = count
             elif start == 2:
                 words = self.ianswer2
-                self.num2 = count
             elif start == 3:
                 words = self.ianswer3
-                self.num3 = count
             elif start == 0:
                 words = self.canswer
                 self.cnum = count
@@ -144,18 +129,6 @@ question10.set_ianswer2("take")
 question10.set_ianswer3("go")
 question10.set_canswer("run")
 
-'''
-question4 = Question()
-question4.set_question("")
-question4.set_ianswer1("")
-question4.set_ianswer2("")
-question4.set_ianswer3("")
-question4.set_canswer("")
-question4.PrezQuestion()
-score = question4.CheckAnswer(score, total)
-total += 1
-'''
-
 QuestionSet = [question1, question2, question3, question4, question5, question6, question7, question8, question9, question10]
 set = random.sample(range(0, 10), 5)
 player1 = input("Enter name of first player: ")
@@ -179,4 +152,3 @@ elif score == score2:
     print("\nWow! What a tie!")
 else:
     print(f"\n{player2} won!")
-    
