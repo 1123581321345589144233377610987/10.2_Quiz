@@ -7,9 +7,6 @@ class Question:
         self.ianswer2 = ""
         self.ianswer3 = ""
         self.canswer = ""
-        self.num1 = 0
-        self.num2 = 0
-        self.num3 = 0
         self.cnum = 0
         self.question = ""
 
